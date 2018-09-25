@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 
 import fileinput
 import sys
@@ -31,7 +31,7 @@ def predictor(name):
 
 def main():
   global dv, NBclassifier, get_features
-  df = pd.read_csv('./nombres.csv')
+  df = pd.read_csv('./datasets/names_dataset_medium.csv')
   df.drop(df[df.Sexo == 'A'].index, inplace = True)
   df.Sexo.replace({'F':0,'M':1},inplace=True)
   df.Nombre = df.Nombre.str.lower()
